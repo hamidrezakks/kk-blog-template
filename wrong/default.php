@@ -1,0 +1,1 @@
+<?php header( 'Location: ../index.php?selectedblog=1004' ) ; ?>

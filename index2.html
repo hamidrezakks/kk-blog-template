@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>HW3</title>
+		<link href="css/global.css" rel="stylesheet" type="text/css" />
+		<script type='text/javascript' src='js/jquery-2.1.0.min.js'></script>
+		<script type='text/javascript' src='js/script.js'></script>
+	</head>
+	<body>
+		<div id="login-overlay" >
+			<div id="login-form" >
+				<span class="cancelbykk" id="login-cancel">
+				</span>
+				<form action="?login=1" method="POST" >
+					<div style="padding: 5px 5%;">
+						<div style="width: 100%;color: #555;margin: 0 0 2px 0;">Email or Mobile-phone</div>
+						<input type="text"  style="width: 258px;" class="textbykk" name="lemail" >
+					</div>
+					<div style="padding: 5px 5%;">
+						<div style="width: 100%;color: #555;margin: 0 0 2px 0;">Password</div>
+						<input type="password"  style="width: 258px;" class="textbykk" name="lpassword" >
+					</div>
+					<div style="padding: 5px 5%;">
+						<div style="width: 100%;color: #555;margin: 0 0 2px 0;"><input type="checkbox" style="float: left;margin: 5px;" name="rememberme" ><div style="margin: 3px;float: left;">Remember</div></div>
+						<input type="submit" value="Login" style="width: 268px;" class="btnbykk" >
+						<input type="hidden" name="login" value="1" >
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="signup-overlay" >
+			<?php 
+			if(!$isLoggedIn)
+			{
+			?>
+			<div id="signup-form" >
+				<span class="cancelbykk" id="signup-cancel">
+				</span>
+				<div class="ajax-index">
+				</div>
+			</div>
+			<?php 
+			}
+			else
+			{
+			?>
+			<div id="profile-form" >
+				<span class="cancelbykk" id="profile-cancel">
+				</span>
+				<div class="ajax-index">
+				</div>
+			</div>
+			<?php 
+			}
+			?>
+		</div>
+		<div id="main" >
+			<div id="navigator" >
+				<div class="item" id="mainpage">
+					main page
+				</div>
+				<div class="item" id="favposts">
+					show favorite posts
+				</div>
+				<div class="tags" >
+					TAGS:
+					<select id="tags-list">
+						<option value="all">All</option>
+					</select>
+				</div>
+			</div>
+			<div id="blogs-container" >
+				No Connection!!!
+			</div>
+		</div>
+		<script type="text/javascript">
+		//getXML("http://www.ceit.aut.ac.ir/~bakhshis/IE/S93-HW-3/blogs.xml");
+		</script>
+	</body>
+</html>
